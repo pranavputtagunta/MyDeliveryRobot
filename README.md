@@ -14,22 +14,36 @@ The idea of this project is to connect an Android phone to Tetrix robot and expe
 7. Use OpenCV to detect street signs and understand the street to match with google direction apis.
 8. Use ultra sonic sensors to detect obstacles and wait for it to clear. In future, this can be enhanced to navigate around the obstacle.
 
-### This project will be developed using Agile methodology with small demos every two weeks, recorded and kept in youtube.
+### This project will be developed using Agile methodology with small demos every two weeks, recorded and kept in youtube. 
 
-### Tentative demo plan 
-1. Show simple app on Android that 
-   a. Read destination address
-   b. Get the directions from current location to destination and show in list view
-   c. Show current step on top
-   d. Pressing next will show next step
-   e. Pressing previous will show previous step
+#### Demo 1 . Google API integration and display of instructions
+1. Show simple app on Android that read destination address
+2. Get the directions from current location to destination and show in list view
+3. Show current step on top
+4. Pressing next will show next step
+5. Pressing previous will show previous step
    
-2. Show directions in number of steps customized to your step size
-   a. Read your step calliberation
-   b. Show directions using steps
-   c. We can test how close is these directions matching with our steps by walking as per its instructions
+#### Demo 2. Convert metrics to steps and display instructions from Google API
+1. Read your step calliberation
+2. Show directions using steps
+3. We can test how close is these directions matching with our steps by walking as per its instructions
    
-3. Build a robot with all terrain wheels and drive with remote control outside. Test the battery capacity and understand how well is it turning or going in straight line. Identify any problems.
-4. Build FTC app with motor control classes and demo simple autonomous actions like forward, back, stop, turns etc. Demo
-5. Integrate FTC app with google apis and modify UI to take destination, on start will take instructions from google directions, control the motors.
-6. 
+#### Demo 3 . Build robot
+1. Build a robot with all terrain wheels and drive with remote control outside.
+2. Test the battery capacity and understand how well is it turning or going in straight line. 
+3. Identify any problems.
+4. Download and build open source FTC Android app
+5. Build FTC app with motor control classes and demo simple autonomous actions like forward, back, stop, turns etc. Demo
+
+#### Demo 4. Integrate FTC app with Google API and demo the self driving behavior of robot using directions
+6. Integrate FTC app with google apis and modify UI to take destination, on start will take instructions from google directions, control the motors.
+7. 
+
+#### Demo 5. Use ultrasonic and maybe touch sensor to detect obstacle, wait and go during navigation
+
+#### Demo 6. Use OpenCV to detect street turning and stop
+
+#### Demo 7. Use OpenCV to detect street turning and turn as per google direction
+
+More demos to be added...
+
