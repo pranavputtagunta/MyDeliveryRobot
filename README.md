@@ -24,10 +24,12 @@ The idea of this project is to connect an Android phone to Tetrix robot and expe
    d. Pressing next will show next step
    e. Pressing previous will show previous step
    
-2. Show directions in number of steps customized to your step side
+2. Show directions in number of steps customized to your step size
    a. Read your step calliberation
    b. Show directions using steps
    c. We can test how close is these directions matching with our steps by walking as per its instructions
    
 3. Build a robot with all terrain wheels and drive with remote control outside. Test the battery capacity and understand how well is it turning or going in straight line. Identify any problems.
-4. 
+4. Build FTC app with motor control classes and demo simple autonomous actions like forward, back, stop, turns etc. Demo
+5. Integrate FTC app with google apis and modify UI to take destination, on start will take instructions from google directions, control the motors.
+6. 
