@@ -22,4 +22,13 @@ public class Direction {
     public DistanceMetrics getUnitMetrics() {
         return unitMetrics;
     }
+
+    @Override
+    public String toString() {
+        return "Direction{" +
+                "type=" + type +
+                ", distance=" + distance +
+                ", unitMetrics=" + unitMetrics +
+                '}';
+    }
 }

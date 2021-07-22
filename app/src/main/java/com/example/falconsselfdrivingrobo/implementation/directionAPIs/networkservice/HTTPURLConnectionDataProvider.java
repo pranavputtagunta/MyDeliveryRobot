@@ -3,16 +3,12 @@ package com.example.falconsselfdrivingrobo.implementation.directionAPIs.networks
 import com.example.falconsselfdrivingrobo.interfaces.directionAPIs.DirectionFetchException;
 import com.example.falconsselfdrivingrobo.interfaces.networkservice.HTTPDataProvider;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class HTTPURLConnectionDataProvider implements HTTPDataProvider {
     private String URL="";
@@ -83,8 +79,8 @@ public class HTTPURLConnectionDataProvider implements HTTPDataProvider {
         for (String name : parameters.keySet()) {
             if(!isFirst) {
                 urlStringBuffer.append("&");
-                isFirst = false;
             }
+            isFirst = false;
             String paramName = URLEncoder.encode(name);
             String paramValue = URLEncoder.encode(parameters.get(name));
             urlStringBuffer.append(paramName+"="+paramValue);

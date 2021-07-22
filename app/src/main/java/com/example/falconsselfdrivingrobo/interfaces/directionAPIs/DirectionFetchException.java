@@ -6,4 +6,9 @@ public class DirectionFetchException extends Exception {
     public DirectionFetchException(String errorMessage) {
         this.message = errorMessage;
     }
+
+    @Override
+    public String getMessage() {
+        return message;
+    }
 }

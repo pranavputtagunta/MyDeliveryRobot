@@ -107,9 +107,14 @@ public class GoogleDirectionFetcher implements DirectionsFetcher {
             }
 
             //add one direction step for distance
-            Direction distanceDirection = getDistanceDirection(step);
+            /*Direction distanceDirection = getDistanceDirection(step);
             if (distanceDirection != null) {
                 directions.add(distanceDirection);
+            }
+             */
+            //use value which is always in meters
+            if (step.distance != null) {
+                directions.add(new Direction(DirectionType.straight,step.distance.value,DistanceMetrics.meters));
             }
         }
 
@@ -170,6 +175,6 @@ public class GoogleDirectionFetcher implements DirectionsFetcher {
         } else {
             directionType = DirectionType.unknown;
         }
-        return new Direction(directionType,0,DistanceMetrics.feets);
+        return new Direction(directionType,0,DistanceMetrics.meters);
     }
 }

@@ -1,9 +1,8 @@
 package com.example.falconsselfdrivingrobo.implementation.directionAPIs;
 
-import com.example.falconsselfdrivingrobo.implementation.directionAPIs.googleAPIs.jsonModelClasses.Distance;
 import com.example.falconsselfdrivingrobo.interfaces.directionAPIs.Direction;
-import com.example.falconsselfdrivingrobo.interfaces.directionAPIs.DistanceMetrics;
 import com.example.falconsselfdrivingrobo.interfaces.directionAPIs.DirectionsHandler;
+import com.example.falconsselfdrivingrobo.interfaces.directionAPIs.DistanceMetrics;
 import com.example.falconsselfdrivingrobo.utils.DistanceUtil;
 
 import java.util.List;
@@ -20,7 +19,7 @@ public class DefaultDirectionHandler implements DirectionsHandler {
         currentIndex = 0;
         totalDistance = 0;
         for (Direction direction : directions) {
-            totalDistance = totalDistance + DistanceUtil.getDistanceInInches(direction.getDistance(), direction.getUnitMetrics());
+            totalDistance = totalDistance + DistanceUtil.getDistanceInMeters(direction.getDistance(), direction.getUnitMetrics());
         }
     }
 
@@ -32,7 +31,7 @@ public class DefaultDirectionHandler implements DirectionsHandler {
 
     @Override
     public Direction getCurrentAndMoveToNext() {
-        if (currentIndex > directions.size()) {
+        if (currentIndex >= directions.size()) {
            return null;
         }
         Direction currentDirectionStep = directions.get(currentIndex);
@@ -50,7 +49,7 @@ public class DefaultDirectionHandler implements DirectionsHandler {
         double remainingDistance = 0;
         for (int i=currentIndex; i<directions.size(); i++) {
             Direction direction = directions.get(i);
-           remainingDistance += DistanceUtil.getDistanceInInches(direction.getDistance(), direction.getUnitMetrics());
+           remainingDistance += DistanceUtil.getDistanceInMeters(direction.getDistance(), direction.getUnitMetrics());
         }
         return remainingDistance;
     }

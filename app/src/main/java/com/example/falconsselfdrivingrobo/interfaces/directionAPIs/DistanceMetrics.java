@@ -1,21 +1,21 @@
 package com.example.falconsselfdrivingrobo.interfaces.directionAPIs;
 
 public enum DistanceMetrics {
-    meters(39.3701),
-    feets(12.0),
-    inches(1.0),
-    miles(63360.0),
-    kilometers(39370.1);
+    meters(1.0),
+    feets(0.3048),
+    inches(0.0254),
+    miles(1609.34),
+    kilometers(1000.0);
 
-    private final double unitInInches;
+    private final double unitInMeters;
 
-    DistanceMetrics(double unitInInches) {
-        this.unitInInches = unitInInches;
+    DistanceMetrics(double unitInMeters) {
+        this.unitInMeters = unitInMeters;
     }
 
 
-    public double getUnitInInches() {
-        return unitInInches;
+    public double getUnitInMeters() {
+        return unitInMeters;
     }
 
 }
